@@ -1,4 +1,3 @@
-import 'package:fc_joblana/plc.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -14,6 +13,9 @@ class LoginPageState extends State<LoginPage> {
         title: Text("Login"),
       ),
       body: _children[_currentIndex],
+      // bottomNavigationBar: BottomAppBar(
+        
+      // ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTappped,
         currentIndex: _currentIndex,
@@ -32,9 +34,10 @@ class LoginPageState extends State<LoginPage> {
   }
 
   int _currentIndex = 1;
-  final List<Widget> _children = [PlaceholderWidget(Colors.white),
-   PlaceholderWidget(Colors.deepOrange),
-   PlaceholderWidget(Colors.green)];
+  final List<Widget> _children = [Text("Colors.white"),
+   Text("Colors.deepOrange"),
+   Text("Colors.green")
+   ];
 
   void onTabTappped(int index) {
     setState(() {
